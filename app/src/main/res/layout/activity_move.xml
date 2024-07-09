@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoveActivity">
+    <RelativeLayout
+        android:layout_width="380dp"
+        android:layout_height="700dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg000"
+            />
+
+        <Button
+            android:layout_width="115dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="DONE"
+            android:onClick="onComplete"/>
+
+        <ImageView
+            android:id="@+id/place3_char"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="63dp"
+            android:layout_marginLeft="168dp"
+            android:onClick="onPlace3"/>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="115dp"
+            android:layout_marginLeft="140dp"
+            android:gravity="center"
+            android:background="#99ffffff"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/place_3_name"
+            android:onClick="onPlace3"/>
+
+        <ImageView
+            android:id="@+id/place2_char"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="168dp"
+            android:layout_marginTop="183dp"
+            android:onClick="onPlace2"/>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="235dp"
+            android:layout_marginLeft="140dp"
+            android:gravity="center"
+            android:background="#99ffffff"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/place_2_name"
+            android:onClick="onPlace2"/>
+
+        <ImageView
+            android:id="@+id/place10_char"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="304dp"
+            android:layout_marginLeft="45dp"
+            android:onClick="onPlace10"/>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="355dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:background="#99ffffff"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/place_10_name"
+            android:onClick="onPlace10"/>
+
+        <ImageView
+            android:id="@+id/place1_char"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="304dp"
+            android:layout_marginLeft="168dp"
+            android:onClick="onPlace1"/>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="355dp"
+            android:layout_marginLeft="140dp"
+            android:gravity="center"
+            android:background="#99ffffff"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/place_1_name"
+            android:onClick="onPlace1"/>
+
+        <ImageView
+            android:id="@+id/place5_char"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="304dp"
+            android:layout_marginLeft="291dp"
+            android:onClick="onPlace5"/>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="355dp"
+            android:layout_marginLeft="260dp"
+            android:gravity="center"
+            android:background="#99ffffff"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/place_5_name"
+            android:onClick="onPlace5"/>
+
+        <ImageView
+            android:id="@+id/place4_char"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="425dp"
+            android:layout_marginLeft="45dp"
+            android:onClick="onPlace4"/>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="475dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:background="#99ffffff"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/place_4_name"
+            android:onClick="onPlace4"/>
+
+        <ImageView
+            android:id="@+id/place7_char"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="425dp"
+            android:layout_marginLeft="168dp"
+            android:onClick="onPlace7"/>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="475dp"
+            android:layout_marginLeft="140dp"
+            android:gravity="center"
+            android:background="#99ffffff"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/place_7_name"
+            android:onClick="onPlace7"/>
+
+        <ImageView
+            android:id="@+id/place6_char"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="425dp"
+            android:layout_marginLeft="291dp"
+            android:onClick="onPlace6"/>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="475dp"
+            android:layout_marginLeft="260dp"
+            android:gravity="center"
+            android:background="#99ffffff"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/place_6_name"
+            android:onClick="onPlace6"/>
+
+        <ImageView
+            android:id="@+id/place8_char"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="545dp"
+            android:layout_marginLeft="105dp"
+            android:onClick="onPlace8"/>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="595dp"
+            android:layout_marginLeft="75dp"
+            android:gravity="center"
+            android:background="#99ffffff"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/place_8_name"
+            android:onClick="onPlace8"/>
+
+        <ImageView
+            android:id="@+id/place9_char"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="545dp"
+            android:layout_marginLeft="225dp"
+            android:onClick="onPlace9"/>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="595dp"
+            android:layout_marginLeft="195dp"
+            android:gravity="center"
+            android:background="#99ffffff"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/place_9_name"
+            android:onClick="onPlace9"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="645dp"
+            android:layout_marginLeft="25dp"
+            android:id="@+id/date"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="TEXT"
+            android:background="#99000000"/>
+
+    </RelativeLayout>
+</RelativeLayout>

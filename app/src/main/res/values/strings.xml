@@ -1,3 +1,32 @@
 <resources>
-    <string name="app_name">생성형 AI를 이용한 게임 개발</string>
+    <string name="app_name">하트비트 아이돌</string>
+
+    <string name="start_game">새로운 게임 시작하기</string>
+    <string name="load_game">이전 게임 불러오기</string>
+    <string name="view_event_cg">이벤트CG 보기</string>
+    <string name="settings">환경설정</string>
+    <string name="credit">Written scripts by ChatGPT 4o\nGenerated images by CalicoMix in tensor.art\nGenerated musics by Udio\nBGM : Dreaming Together</string>
+
+    <string name="default_name">강철민</string>
+    <string name="input_name">주인공 이름을 입력하세요.</string>
+    <string name="copying_dbfile">데이터 파일을 복사 중입니다...</string>
+    <string name="copied_dbfile">데이터 파일의 복사가 끝났습니다.</string>
+
+    <string name="love_point">호감도:</string>
+
+    <string name="place_1_name">연습실</string>
+    <string name="place_2_name">녹음실</string>
+    <string name="place_3_name">기숙사</string>
+    <string name="place_4_name">무대</string>
+    <string name="place_5_name">방송 스튜디오</string>
+    <string name="place_6_name">카페</string>
+    <string name="place_7_name">옷가게</string>
+    <string name="place_8_name">학교</string>
+    <string name="place_9_name">공원</string>
+    <string name="place_10_name">팬미팅 장소</string>
+
+    <string name="bgm_1_name">Whispered Grace (유아라 테마)</string>
+    <string name="bgm_2_name">Radiant Dynamo (박지원 테마)</string>
+    <string name="bgm_3_name">Radiant Heart (김유진 테마)</string>
+    <string name="bgm_4_name">Radiant Heart (주인공 테마)</string>
 </resources>
