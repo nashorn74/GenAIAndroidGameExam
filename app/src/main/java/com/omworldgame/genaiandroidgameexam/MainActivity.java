@@ -17,6 +17,7 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.omworldgame.genaiandroidgameexam.common.Constant;
 import com.omworldgame.genaiandroidgameexam.common.Utility;
 
 import java.util.Random;
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onStartGame(View view) {
-        /*Utility.playWaveFromDAT(R.raw.select);*/
+        Utility.playWaveFromDAT(R.raw.select);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.input_name);
@@ -115,29 +116,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onViewCG(View view) {
-        //Utility.playWaveFromDAT(R.raw.select);
+        Utility.playWaveFromDAT(R.raw.select);
 
         Intent intent = new Intent(MainActivity.this, ViewCgMenuActivity.class);
         startActivity(intent);
     }
 
     public void onSettings(View view) {
-        /*Utility.playWaveFromDAT(R.raw.select);
+        Utility.playWaveFromDAT(R.raw.select);
 
-        //Intent intent = new Intent(MainActivity.this, ViewScriptMenuActivity.class);
-        //startActivity(intent);
         Intent intent = new Intent(MainActivity.this, ConfigActivity.class);
-        startActivityForResult(intent, Constant.GM_CONFIG);*/
+        startActivityForResult(intent, Constant.GM_CONFIG);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        /*if (requestCode == Constant.GM_LOAD) {
+        if (requestCode == Constant.GM_LOAD) {
             if (resultCode == RESULT_OK) {
                 int loadNum = data.getIntExtra("load_num", 0);
-
-                //TODO 저장된 파일이 있는지 체크
 
                 Intent intent = new Intent(MainActivity.this, GameMainActivity.class);
                 intent.putExtra("load_num", loadNum);
@@ -145,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
             }
         } else if (requestCode == Constant.GM_CONFIG) {
             if (preferences.getBoolean("BGM", true)) {
-                mediaPlayer = MediaPlayer.create(this, R.raw.bgm00_casanova_whispers);
+                mediaPlayer = MediaPlayer.create(this, R.raw.bgm01_dreaming_together);
                 mediaPlayer.setLooping(true);
                 mediaPlayer.start();
             } else {
@@ -153,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                     mediaPlayer.stop();
                 }
             }
-        }*/
+        }
     }
 
     @Override

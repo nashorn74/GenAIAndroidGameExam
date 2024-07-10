@@ -74,7 +74,7 @@ public class ViewCgActivity extends AppCompatActivity {
             } else if (char_num == 2) {
                 mediaPlayer = MediaPlayer.create(this, R.raw.bgm04_radiant_heart);
             } else if (char_num == 3) {
-                mediaPlayer = MediaPlayer.create(this, R.raw.bgm05_rise_and_shine);
+                mediaPlayer = MediaPlayer.create(this, R.raw.bgm06_serene_starlight);
             }
         }
 
@@ -109,7 +109,6 @@ public class ViewCgActivity extends AppCompatActivity {
     }
 
     public void onPrev(View view) {
-        //Utility.playWaveFromDAT(R.raw.click);
         boolean exist = false;
         for (int i = viewCGNum - 1; i > Constant.EventData.START_POINT[char_num]; i--) {
             if (Utility.isViewEvent(i)) {
@@ -119,7 +118,7 @@ public class ViewCgActivity extends AppCompatActivity {
             }
         }
         if (exist) {
-            //Utility.playWaveFromDAT(R.raw.previous);
+            Utility.playWaveFromDAT(R.raw.previous);
             displayEventCG();
         }
     }
@@ -134,13 +133,13 @@ public class ViewCgActivity extends AppCompatActivity {
             }
         }
         if (exist) {
-            //Utility.playWaveFromDAT(R.raw.previous);
+            Utility.playWaveFromDAT(R.raw.previous);
             displayEventCG();
         }
     }
 
     public void onBack(View view) {
-        //Utility.playWaveFromDAT(R.raw.cancel);
+        Utility.playWaveFromDAT(R.raw.cancel);
         finish();
     }
 

@@ -138,14 +138,14 @@ public class GameMainActivity extends AppCompatActivity {
             if (mediaPlayer != null) {
                 mediaPlayer.release();
             }
-            mediaPlayer = MediaPlayer.create(this, R.raw.bgm02_whispered_grace);
+            mediaPlayer = MediaPlayer.create(this, R.raw.bgm06_serene_starlight);
             mediaPlayer.setLooping(true);
             mediaPlayer.start();
         }
     }
 
     public void onMove(View view) {
-        //Utility.playWaveFromDAT(R.raw.select);
+        Utility.playWaveFromDAT(R.raw.select);
 
         List<EventData> locations = Utility.getEventLocationList(gameEngine);
         for (int i = 0; i < locations.size(); i++) {
@@ -188,14 +188,14 @@ public class GameMainActivity extends AppCompatActivity {
     }
 
     public void onSave(View view) {
-        /*Utility.playWaveFromDAT(R.raw.select);
+        Utility.playWaveFromDAT(R.raw.select);
 
-        Intent intent = new Intent(GameMainActivity.this, SaveGameActivity.class);
+        /*Intent intent = new Intent(GameMainActivity.this, SaveGameActivity.class);
         startActivityForResult(intent, Constant.GM_SAVE);*/
     }
 
     public void onQuit(View view) {
-        //Utility.playWaveFromDAT(R.raw.cancel);
+        Utility.playWaveFromDAT(R.raw.cancel);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(GameMainActivity.this);
         builder.setTitle("종료");
@@ -235,7 +235,7 @@ public class GameMainActivity extends AppCompatActivity {
                             int nplace = Integer.parseInt(array[2]);
 
                             if (nmonth == gameEngine.getCurMonth() && nday == gameEngine.getCurDay() && nplace == gameEngine.getCurPlace() && !gameEngine.getEvent(i, nscene - 1)) {
-                                //Utility.playWaveFromDAT(R.raw.vibra);
+                                Utility.playWaveFromDAT(R.raw.vibra);
                                 gameEngine.setEvent(i,  nscene-1, true);
                                 int lovePoint = -1;
                                 if (i < Constant.LOVE_COUNT) {

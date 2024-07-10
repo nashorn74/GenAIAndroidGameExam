@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.omworldgame.genaiandroidgameexam.common.Utility;
 import com.omworldgame.genaiandroidgameexam.entity.PlaceData;
 
 import java.util.ArrayList;
@@ -174,6 +175,8 @@ public class MoveActivity extends AppCompatActivity {
     }
 
     public void onComplete(View view) {
+        Utility.playWaveFromDAT(R.raw.click);
+
         Intent intent = new Intent();
         intent.putExtra("place_num", 9998);
         setResult(RESULT_OK, intent);

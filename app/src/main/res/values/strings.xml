@@ -28,5 +28,15 @@
     <string name="bgm_1_name">Whispered Grace (유아라 테마)</string>
     <string name="bgm_2_name">Radiant Dynamo (박지원 테마)</string>
     <string name="bgm_3_name">Radiant Heart (김유진 테마)</string>
-    <string name="bgm_4_name">Radiant Heart (주인공 테마)</string>
+    <string name="bgm_4_name">Serene Starlight (주인공 테마)</string>
+
+    <string name="prev_button">이전</string>
+    <string name="next_button">다음</string>
+    <string name="back_button">뒤로</string>
+    <string name="complete_button">다음 날로</string>
+    <string name="move_button">이동</string>
+    <string name="save_button">저장</string>
+    <string name="quit_button">종료</string>
+    <string name="bgm">배경 음악</string>
+    <string name="sound">효과음</string>
 </resources>

@@ -19,11 +19,13 @@
             />
 
         <Button
-            android:layout_width="115dp"
-            android:layout_height="60dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:text="DONE"
+            android:text="@string/complete_button"
             android:onClick="onComplete"/>
 
         <ImageView

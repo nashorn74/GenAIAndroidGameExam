@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="25dp"
         android:layout_marginLeft="20dp"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -48,7 +48,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.1"
+            android:layout_weight="0.075"
             android:orientation="horizontal"
             android:weightSum="1">
             <TextView
@@ -60,7 +60,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.18"
-                android:text="PREV"
+                android:text="@string/prev_button"
                 android:onClick="onPrev"/>
             <TextView
                 android:layout_width="0dp"
@@ -71,7 +71,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.18"
-                android:text="NEXT"
+                android:text="@string/next_button"
                 android:onClick="onNext"/>
             <TextView
                 android:layout_width="0dp"
@@ -82,7 +82,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.3"
-                android:text="BACK"
+                android:text="@string/back_button"
                 android:onClick="onBack"/>
         </LinearLayout>
     </LinearLayout>
