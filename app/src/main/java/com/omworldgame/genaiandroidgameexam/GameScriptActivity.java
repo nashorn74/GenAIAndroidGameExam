@@ -93,7 +93,7 @@ public class GameScriptActivity extends AppCompatActivity {
             }
 
             Button skipButton = (Button)findViewById(R.id.skip_button);
-            //skipButton.setVisibility(View.GONE);//릴리즈모드에서는 활성화(디버깅용 버튼)
+            skipButton.setVisibility(View.GONE);//릴리즈모드에서는 활성화(디버깅용 버튼)
             skipButton.setOnClickListener(new View.OnClickListener() {
 
                 @Override
@@ -195,7 +195,7 @@ public class GameScriptActivity extends AppCompatActivity {
 
         if (talkMessage.length() > 3) {
             nothing = false;
-            talkMessage = talkMessage.replace("[]", name);
+            talkMessage = talkMessage.replace("주인공", name);
             interfaceImage.setVisibility(View.VISIBLE);
             talkText.setVisibility(View.VISIBLE);
             talkText.setText(talkMessage);
@@ -353,9 +353,9 @@ public class GameScriptActivity extends AppCompatActivity {
     public void onBackPressed(){
 
         AlertDialog.Builder builder = new AlertDialog.Builder(GameScriptActivity.this);
-        builder.setTitle("종료");
-        builder.setMessage("게임을 종료하시겠습니까?")
-                .setCancelable(true).setPositiveButton("확인", new DialogInterface.OnClickListener() {
+        builder.setTitle(getResources().getString(R.string.quit_title));
+        builder.setMessage(getResources().getString(R.string.saved_game_message))
+                .setCancelable(true).setPositiveButton(getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
                         if (preferences.getBoolean("BGM", true)) {
@@ -370,7 +370,7 @@ public class GameScriptActivity extends AppCompatActivity {
 
                         finish();
                     }
-                }).setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                }).setNegativeButton(getResources().getString(R.string.no), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //nothing
                     }

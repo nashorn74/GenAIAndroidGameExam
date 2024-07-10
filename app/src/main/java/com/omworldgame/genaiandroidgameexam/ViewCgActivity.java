@@ -86,7 +86,8 @@ public class ViewCgActivity extends AppCompatActivity {
 
     void displayEventCG() {
         TextView countText = (TextView)findViewById(R.id.count);
-        countText.setText((viewCGNum+1)+"/"+Constant.EventData.getEventDataSize());
+        int total = Constant.EventData.END_POINT[char_num] - (Constant.EventData.START_POINT[char_num]+1);
+        countText.setText((viewCGNum-Constant.EventData.START_POINT[char_num])+"/"+total);
 
         ImageView bgImage = (ImageView)findViewById(R.id.event_cg);
         try {

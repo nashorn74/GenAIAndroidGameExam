@@ -36,7 +36,17 @@
     <string name="complete_button">다음 날로</string>
     <string name="move_button">이동</string>
     <string name="save_button">저장</string>
+    <string name="load_button">불러오기</string>
     <string name="quit_button">종료</string>
     <string name="bgm">배경 음악</string>
     <string name="sound">효과음</string>
+
+    <string name="save_game">게임 저장하기</string>
+    <string name="empty_filename">- - - - - NO SAVE - - - - -</string>
+    <string name="saved_game_message">게임을 저장했습니다.</string>
+
+    <string name="quit_title">종료</string>
+    <string name="quit_yesno">게임을 종료하시겠습니까?</string>
+    <string name="yes">예</string>
+    <string name="no">아니오</string>
 </resources>

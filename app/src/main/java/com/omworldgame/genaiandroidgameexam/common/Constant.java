@@ -10,7 +10,6 @@ public class Constant {
     public static final String GAME_VERSION = "HeartbeatsIdol v1.0";
     public static final String DB_NAME = "heartbeats_idol.db";
 
-    public static final int GM_MAINMENU 		= 0;
     public static final int GM_INTRO			= 1;
     public static final int GM_ENDING			= 4;
     public static final int GM_PLAY				= 5;

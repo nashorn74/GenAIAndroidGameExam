@@ -9,7 +9,6 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
-import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -109,10 +108,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onLoadGame(View view) {
-        /*Utility.playWaveFromDAT(R.raw.select);
+        Utility.playWaveFromDAT(R.raw.select);
 
         Intent intent = new Intent(MainActivity.this, LoadGameActivity.class);
-        startActivityForResult(intent, Constant.GM_LOAD);*/
+        startActivityForResult(intent, Constant.GM_LOAD);
     }
 
     public void onViewCG(View view) {

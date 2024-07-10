@@ -12,7 +12,6 @@ import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -30,13 +29,10 @@ import com.omworldgame.genaiandroidgameexam.entity.PlaceData;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class GameMainActivity extends AppCompatActivity {
 
     private GameEngine gameEngine = new GameEngine();
-
-    private boolean placeEvent = false;
 
     private static MediaPlayer mediaPlayer = null;
     private SoundPool soundPool;
@@ -150,7 +146,6 @@ public class GameMainActivity extends AppCompatActivity {
         List<EventData> locations = Utility.getEventLocationList(gameEngine);
         for (int i = 0; i < locations.size(); i++) {
             EventData place = locations.get(i);
-            Log.e("Test", place.charNum+"/"+place.placeNum);
         }
 
         int curMonth = gameEngine.getCurMonth();
@@ -169,10 +164,8 @@ public class GameMainActivity extends AppCompatActivity {
         placeDataArrayList.add(new PlaceData(9, getResources().getString(R.string.place_9_name), 0, -1));
         placeDataArrayList.add(new PlaceData(10, getResources().getString(R.string.place_10_name), 0, -1));
 
-        Log.e("Test", "locations.size()="+locations.size());
         for (int i = 0; i < placeDataArrayList.size(); i++) {
             for (int j = 0; j < locations.size(); j++) {
-                Log.e("Test", placeDataArrayList.get(i).getPlaceNumber()+"/"+locations.get(j).placeNum);
                 if (placeDataArrayList.get(i).getPlaceNumber() == locations.get(j).placeNum) {
                     placeDataArrayList.get(i).setEventCharNum(locations.get(j).charNum);
                     break;
@@ -190,22 +183,22 @@ public class GameMainActivity extends AppCompatActivity {
     public void onSave(View view) {
         Utility.playWaveFromDAT(R.raw.select);
 
-        /*Intent intent = new Intent(GameMainActivity.this, SaveGameActivity.class);
-        startActivityForResult(intent, Constant.GM_SAVE);*/
+        Intent intent = new Intent(GameMainActivity.this, SaveGameActivity.class);
+        startActivityForResult(intent, Constant.GM_SAVE);
     }
 
     public void onQuit(View view) {
         Utility.playWaveFromDAT(R.raw.cancel);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(GameMainActivity.this);
-        builder.setTitle("종료");
-        builder.setMessage("게임을 종료하시겠습니까?")
-                .setCancelable(true).setPositiveButton("확인", new DialogInterface.OnClickListener() {
+        builder.setTitle(getResources().getString(R.string.quit_title));
+        builder.setMessage(getResources().getString(R.string.quit_yesno))
+                .setCancelable(true).setPositiveButton(getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Utility.saveEventData();
                         finish();
                     }
-                }).setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                }).setNegativeButton(getResources().getString(R.string.no), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //nothing
                     }
@@ -286,7 +279,7 @@ public class GameMainActivity extends AppCompatActivity {
                     performEvent();
                 } else if (placeNum == 9998) {//이동 종료
                     //Utility.playWaveFromDAT(R.raw.select);
-                    //마지막날인가
+                    //마지막 날인지 체크
                     if (gameEngine.getCurMonth() == 7 && gameEngine.getCurDay() == 31) {
                         int maxlove = 0;
                         int maxlovegirl = -1;
@@ -330,7 +323,7 @@ public class GameMainActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 int saveNum = data.getIntExtra("save_num", 0);
                 Utility.saveGame(gameEngine, saveNum);
-                Toast.makeText(getBaseContext(), "게임을 저장했습니다.", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), getResources().getString(R.string.saved_game_message), Toast.LENGTH_LONG).show();
             }
         }
     }

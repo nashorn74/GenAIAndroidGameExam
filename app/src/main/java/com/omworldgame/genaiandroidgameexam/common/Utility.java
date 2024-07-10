@@ -4,14 +4,12 @@ import static android.content.Context.VIBRATOR_SERVICE;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.os.AsyncTask;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -67,7 +65,6 @@ public class Utility {
             }
 
             File file = new File(myDir, filename);
-            Log.e("filename", file.getAbsolutePath());
 
             FileOutputStream fileStream = new FileOutputStream(file);
             DataOutputStream dataStream = new DataOutputStream(fileStream);
@@ -155,7 +152,6 @@ public class Utility {
 
         for (int i = 0; i < Constant.SAVE_FILE_COUNT; i++) {
             String filename = String.format(activity.getFilesDir().getAbsolutePath()+"/save/game_%d.sav", i);
-            Log.e("filename", filename);
             File file = new File(filename);
             if (file.isFile()) {
                 try {
@@ -186,7 +182,7 @@ public class Utility {
                     Toast.makeText(activity, e.toString(), Toast.LENGTH_LONG).show();
                 }
             } else {
-                fileList.add("- - - - - NO SAVE - - - - -");
+                fileList.add(activity.getResources().getString(R.string.empty_filename));
             }
         }
         return fileList;
@@ -195,7 +191,6 @@ public class Utility {
     private static boolean[] viewEventCG = new boolean[Constant.EVENT_CG_MAX];
     private static final String PREFS_NAME = "EventPrefs";
     public static void saveEventData() {
-        Log.i("", "saveEventData()");
         SharedPreferences prefs = activity.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
 
@@ -242,8 +237,6 @@ public class Utility {
             int volume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
             int ringVolume = audioManager.getStreamVolume(AudioManager.STREAM_RING);
 
-            //Toast.makeText(getBaseContext(), String.valueOf(volume)+"/"+String.valueOf(ringVolume), Toast.LENGTH_LONG).show();
-
             if (ringVolume == 0 || volume == 0) {
                 Vibrator vibrator = (Vibrator) activity.getSystemService(VIBRATOR_SERVICE);
                 //vibrator.vibrate(VIBRATE_DURATION);
@@ -259,7 +252,6 @@ public class Utility {
 
                 }
 
-                //player = new MediaPlayer();
                 try {
                     player = MediaPlayer.create(activity, resourceId);
                     //player.prepare();
@@ -267,9 +259,6 @@ public class Utility {
                 } catch(Exception e) {
                     Toast.makeText(activity, e.toString(), Toast.LENGTH_LONG).show();
                 }
-
-	        		/*Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-	    	    	vibrator.vibrate(VIBRATE_DURATION);*/
             }
         } catch(Exception e) {
             Log.e("", e.toString());
